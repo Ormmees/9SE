@@ -3,26 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marie ilutuba</title>
+    <title>Marie ilutuba - Avaleht</title>
     <link rel="stylesheet" href="stiil.css"> 
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
     <header class="header">
         <h1 class="logo">Marie ilutuba</h1>
         
-        <div class="header-tools">
-            <nav class="main-nav">
-                <a href="#hinnakiri">HINNAKIRI</a>
-                <a href="#broneeri">BRONEERI AEG</a>
-            </nav>
-            <div class="social-icons">
-                <a href="#" class="social-circle">IG</a>
-                <a href="#" class="social-circle">F</a>
-                <a href="#" class="social-circle">T</a>
-            </div>
-        </div>
+        <nav class="main-nav">
+            <a href="hinnakiri.html" class="nav-button">HINNAKIRI</a>
+            <a href="#" class="nav-button">BRONEERI AEG</a> </nav>
     </header>
 
     <main class="main-content">
@@ -30,24 +23,39 @@
         <section class="gallery-column">
             <div class="content-box gallery-box">
                 <h2>** Galerii **</h2>
-                <p>Siin on koht teie tööde piltidele ja videotele.</p>
-                <div class="placeholder-image">[Pilt 1]</div>
-                <div class="placeholder-image">[Pilt 2]</div>
+                <div class="gallery-placeholder">
+                    <p>Esialgne pilt ilutoast.</p>
+                </div>
             </div>
         </section>
 
         <aside class="info-column">
             
+            <div class="social-icons">
+                <a href="#" class="social-circle disabled"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-circle disabled"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.tumblr.com/dashboard" target="_blank" class="social-circle active"><i class="fab fa-tumblr"></i></a>
+            </div>
+            
             <div class="content-box map-box">
                 <h2>** Google maps kaart **</h2>
-                <div class="placeholder-map">[Interaktiivne Kaart]</div>
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1565.3400615456208!2d26.719812999999997!3d58.375276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eb611a91e1d08d%3A0x400b3f5454652c71!2sTartu%20Raudteejaam!5e0!3m2!1set!2see!4v1709230538059!5m2!1set!2see" 
+                    width="100%" 
+                    height="300" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
             </div>
             
             <div class="contact-details">
-                <p class="address">** aadress **</p>
+                <p class="label">** aadress **</p>
                 <p>Näide 10, Tallinn</p>
-                <p class="hours">** avamis- ja sulgemisajad **</p>
-                <p>E-P: 10:00 - 19:00</p>
+                <p class="label">** avamis- ja sulgemisajad **</p>
+                <p>E-R: 10:00 - 19:00</p>
+                <p>L-P: Suletud</p>
             </div>
 
         </aside>
