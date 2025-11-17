@@ -1,4 +1,4 @@
-
+/* --- ÜLDISED STIILID JA TAUST --- */
 body {
     font-family: 'Open Sans', sans-serif;
     margin: 0;
@@ -10,7 +10,7 @@ body {
     line-height: 1.6;
 }
 
-
+/* --- LOGO JA NAVIGATSIOON --- */
 .header {
     padding: 30px 20px 20px 20px;
     text-align: center;
@@ -36,22 +36,22 @@ body {
     font-weight: bold;
     letter-spacing: 1.5px;
     padding: 8px 15px;
-    border-bottom: 2px solid transparent; /* Alumine joon, et anda "nupu" tunnet */
+    border-bottom: 2px solid transparent; 
     transition: border-color 0.3s;
 }
 
 .nav-button:hover {
-    border-color: #9f8c88; /* Kergelt soe toon, et sobiks heleda taustaga */
+    border-color: #9f8c88;
 }
 
-
+/* --- KAHE-VEERULINE PAIGUTUS (MAIN) --- */
 .main-content {
     display: flex;
     max-width: 1100px;
     margin: 40px auto;
     padding: 0 20px;
     gap: 30px;
-    align-items: flex-start; /* Veerud algavad samalt kõrguselt */
+    align-items: flex-start; 
 }
 
 .gallery-column {
@@ -62,27 +62,25 @@ body {
 .info-column {
     flex: 1; /* Kitsas veerg (ca 35%) */
     min-width: 30%;
-    /* Flexbox, et sotsiaalmeedia ja kaart oleksid paigas */
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-
+/* Ühine stiil sisu kastidele */
 .content-box {
     background-color: #fff;
     padding: 20px;
     border: 1px solid #d4d4d4;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Kerge vari */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); 
     margin-bottom: 20px;
     width: 100%;
     box-sizing: border-box;
 }
 
-
+/* Galerii ja Kaardi sisu */
 .gallery-placeholder, iframe {
     background-color: #efefef;
-    height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -94,10 +92,16 @@ body {
     height: 600px; /* Galerii on suurem */
 }
 
+.placeholder-text {
+    margin: 5px 0;
+}
+
 /* Kontaktinfo Kaardi All */
 .contact-details {
     width: 100%;
     text-align: center;
+    padding: 10px 0;
+    margin-top: 10px;
 }
 
 .contact-details p {
@@ -111,7 +115,7 @@ body {
     margin-top: 15px;
 }
 
-
+/* --- SOTSIAALMEEDIA IKoonid (IG, F, T) --- */
 .social-icons {
     display: flex;
     gap: 15px;
@@ -133,16 +137,16 @@ body {
 }
 
 .social-circle.active:hover {
-    background-color: #36465d; /* Tumblr värv */
+    background-color: #36465d; 
     color: #fff;
 }
 
 .social-circle.disabled {
-    opacity: 0.5; /* Hetkel mitteklõpsatavad ikoonid tuhmimaks */
+    opacity: 0.5; 
     cursor: default;
 }
 
-
+/* --- HINNAKIRI LEHE STIILID --- */
 .price-list-content {
     max-width: 800px;
     margin: 40px auto;
@@ -179,19 +183,15 @@ body {
     color: #666;
 }
 
-
+/* --- MOBIILI Reageeriv Disain --- */
 @media (max-width: 800px) {
     .main-content {
-        flex-direction: column; /* Veerud üksteise alla mobiilivaates */
+        flex-direction: column; 
     }
     .gallery-column, .info-column {
         min-width: 100%;
     }
     .logo {
         font-size: 2.5em;
-    }
-    .header-tools {
-        flex-direction: column;
-        gap: 15px;
     }
 }
