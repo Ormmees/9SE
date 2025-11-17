@@ -1,4 +1,4 @@
-/* --- ÜLDISED STIILID JA TAUST --- */
+
 body {
     font-family: 'Open Sans', sans-serif;
     margin: 0;
@@ -10,7 +10,7 @@ body {
     line-height: 1.6;
 }
 
-/* --- LOGO JA NAVIGATSIOON --- */
+
 .header {
     padding: 30px 20px 20px 20px;
     text-align: center;
@@ -44,7 +44,7 @@ body {
     border-color: #9f8c88;
 }
 
-/* --- KAHE-VEERULINE PAIGUTUS (MAIN) --- */
+
 .main-content {
     display: flex;
     max-width: 1100px;
@@ -55,19 +55,19 @@ body {
 }
 
 .gallery-column {
-    flex: 2; /* Lai veerg (ca 65%) */
+    flex: 2; 
     min-width: 65%;
 }
 
 .info-column {
-    flex: 1; /* Kitsas veerg (ca 35%) */
+    flex: 1; 
     min-width: 30%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-/* Ühine stiil sisu kastidele */
+
 .content-box {
     background-color: #fff;
     padding: 20px;
@@ -78,7 +78,7 @@ body {
     box-sizing: border-box;
 }
 
-/* Galerii ja Kaardi sisu */
+
 .gallery-placeholder, iframe {
     background-color: #efefef;
     display: flex;
@@ -89,14 +89,14 @@ body {
     width: 100%;
 }
 .gallery-placeholder {
-    height: 600px; /* Galerii on suurem */
+    height: 600px; 
 }
 
 .placeholder-text {
     margin: 5px 0;
 }
 
-/* Kontaktinfo Kaardi All */
+
 .contact-details {
     width: 100%;
     text-align: center;
@@ -115,7 +115,7 @@ body {
     margin-top: 15px;
 }
 
-/* --- SOTSIAALMEEDIA IKoonid (IG, F, T) --- */
+
 .social-icons {
     display: flex;
     gap: 15px;
@@ -146,8 +146,8 @@ body {
     cursor: default;
 }
 
-/* --- HINNAKIRI LEHE STIILID --- */
-.price-list-content {
+
+.price-list-content, .booking-content {
     max-width: 800px;
     margin: 40px auto;
     padding: 20px;
@@ -155,7 +155,7 @@ body {
     border: 1px solid #d4d4d4;
 }
 
-.price-list-content h2 {
+.price-list-content h2, .booking-content h2 {
     text-align: center;
     margin-bottom: 30px;
 }
@@ -183,7 +183,17 @@ body {
     color: #666;
 }
 
-/* --- MOBIILI Reageeriv Disain --- */
+.booking-content {
+    text-align: center;
+}
+
+.booking-form-placeholder {
+    padding: 30px;
+    border: 1px dashed #ccc;
+    background-color: #f9f9f9;
+}
+
+
 @media (max-width: 800px) {
     .main-content {
         flex-direction: column; 
