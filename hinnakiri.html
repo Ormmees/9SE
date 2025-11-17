@@ -3,16 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hinnakiri</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Marie ilutuba - Hinnakiri</title>
+    <link rel="stylesheet" href="stiil.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Hinnakiri</h1>
-    <ul>
-        <li>Juukselõikus: 20€</li>
-        <li>Kreemiline hooldus: 35€</li>
-        <li>Maniküür: 15€</li>
-    </ul>
-    <a href="index.html">Tagasi pealehele</a>
+
+    <header class="header">
+        <h1 class="logo">Marie ilutuba</h1>
+        <nav class="main-nav">
+            <a href="index.html" class="nav-button">AVALEHT</a>
+            <a href="#" class="nav-button">BRONEERI AEG</a>
+        </nav>
+    </header>
+
+    <main class="price-list-content">
+        <h2>Hinnakiri</h2>
+        
+        <div class="price-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Teenus</th>
+                        <th>Kestus</th>
+                        <th>Hind (€)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Klassikaline maniküür</td><td>60 min</td><td>35</td></tr>
+                    <tr><td>Geellakkimine</td><td>90 min</td><td>45</td></tr>
+                    <tr><td>Pediküür</td><td>90 min</td><td>55</td></tr>
+                    <tr><td>Kulmude keemiline värvimine</td><td>30 min</td><td>15</td></tr>
+                    <tr><td>Ripsmete pikendamine (klassika)</td><td>120 min</td><td>65</td></tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <p class="note">Hinnad sisaldavad käibemaksu. Püsiklientidele kehtib -10% soodustus.</p>
+
+    </main>
+
 </body>
 </html>
