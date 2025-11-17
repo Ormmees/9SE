@@ -1,138 +1,197 @@
-/* Põhi- ja Taustaseaded */
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8; /* Kerge taustavärv */
     color: #333;
+    /* Tekstuuriline Taust (Heledates toonides tapeedi moodi) */
+    background-color: #f7f7f7;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="4" height="4" viewBox="0 0 4 4"><path fill="%23e5e5e5" d="M1 3h1v1H1V3zm2-2h1v1H3V1z"></path></svg>');
+    line-height: 1.6;
 }
 
-/* 🎨 Stiil Pealkirjale "Marie ilutuba" */
+
+.header {
+    padding: 30px 20px 20px 20px;
+    text-align: center;
+}
+
 .logo {
-    font-family: 'Playfair Display', serif; /* Skript-font */
-    font-size: 3em;
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5em;
     font-style: italic;
     font-weight: 400;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-/* Päise ja Navigatsiooni Paigutus */
-.header-tools {
-    display: flex;
-    justify-content: center; /* Tsentreerib navigatsiooni ja sotsiaalmeedia */
-    align-items: center;
-    gap: 50px; /* Vahe navigatsiooni ja sotsiaalmeedia vahel */
-    padding-bottom: 30px;
-    border-bottom: 1px solid #ddd;
-}
-
-/* Navigeerimislingid (Hinnakiri/Broneeri) */
-.main-nav a {
-    text-decoration: none;
-    color: #000;
-    font-weight: bold;
-    margin: 0 15px;
-    padding: 5px 10px;
-    letter-spacing: 1px;
-    transition: color 0.3s;
-}
-
-.main-nav a:hover {
-    color: #555;
-}
-
-/* Sotsiaalmeedia Ringid */
-.social-icons {
-    display: flex;
-    gap: 10px;
-}
-
-.social-circle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 30px;
-    height: 30px;
-    border: 1px solid #000;
-    border-radius: 50%;
-    text-decoration: none;
-    color: #000;
-    font-size: 0.8em;
-    font-weight: bold;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.social-circle:hover {
-    background-color: #000;
-    color: #fff;
-}
-
-/* --- KAHE-VEERULINE SISU PAIGUTUS (Flexbox) --- */
-.main-content {
-    display: flex;
-    max-width: 1200px; /* Maksimaalne laius lehe keskel */
-    margin: 40px auto;
-    padding: 0 20px;
-    gap: 40px; /* Veergude vaheline kaugus */
-}
-
-.gallery-column {
-    flex: 2; /* Vasak veerg on laiem (2/3) */
-    min-width: 60%;
-}
-
-.info-column {
-    flex: 1; /* Parem veerg on kitsam (1/3) */
-    min-width: 30%;
-}
-
-/* Ühine stiil sisu kastidele */
-.content-box {
-    background-color: #fff;
-    padding: 20px;
-    border: 1px solid #ccc;
     margin-bottom: 30px;
 }
 
-/* Kaardi ja Galerii Placehoderid */
-.placeholder-map, .placeholder-image {
-    background-color: #eee;
-    height: 250px;
+.main-nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.nav-button {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    padding: 8px 15px;
+    border-bottom: 2px solid transparent; /* Alumine joon, et anda "nupu" tunnet */
+    transition: border-color 0.3s;
+}
+
+.nav-button:hover {
+    border-color: #9f8c88; /* Kergelt soe toon, et sobiks heleda taustaga */
+}
+
+
+.main-content {
+    display: flex;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+    gap: 30px;
+    align-items: flex-start; /* Veerud algavad samalt kõrguselt */
+}
+
+.gallery-column {
+    flex: 2; /* Lai veerg (ca 65%) */
+    min-width: 65%;
+}
+
+.info-column {
+    flex: 1; /* Kitsas veerg (ca 35%) */
+    min-width: 30%;
+    /* Flexbox, et sotsiaalmeedia ja kaart oleksid paigas */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.content-box {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #d4d4d4;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Kerge vari */
+    margin-bottom: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+.gallery-placeholder, iframe {
+    background-color: #efefef;
+    height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid #ddd;
-    margin-bottom: 10px;
     font-style: italic;
     color: #666;
+    width: 100%;
+}
+.gallery-placeholder {
+    height: 600px; /* Galerii on suurem */
 }
 
-/* Kontaktinfo Stiil */
+/* Kontaktinfo Kaardi All */
 .contact-details {
-    margin-top: 10px;
-    line-height: 1.6;
+    width: 100%;
+    text-align: center;
 }
 
 .contact-details p {
     margin: 5px 0;
 }
 
-.contact-details .address, .contact-details .hours {
+.contact-details .label {
     font-weight: bold;
     font-style: italic;
+    color: #555;
+    margin-top: 15px;
 }
 
-/* Reageeriv Disain (Mobiilivaade) */
-@media (max-width: 768px) {
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.social-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    text-decoration: none;
+    color: #000;
+    font-size: 1.2em;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.social-circle.active:hover {
+    background-color: #36465d; /* Tumblr värv */
+    color: #fff;
+}
+
+.social-circle.disabled {
+    opacity: 0.5; /* Hetkel mitteklõpsatavad ikoonid tuhmimaks */
+    cursor: default;
+}
+
+
+.price-list-content {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #d4d4d4;
+}
+
+.price-list-content h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.price-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.price-table th, .price-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.price-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.price-list-content .note {
+    text-align: center;
+    margin-top: 20px;
+    font-style: italic;
+    color: #666;
+}
+
+
+@media (max-width: 800px) {
     .main-content {
-        flex-direction: column; /* Virnasta veerud mobiilivaates üksteise alla */
+        flex-direction: column; /* Veerud üksteise alla mobiilivaates */
+    }
+    .gallery-column, .info-column {
+        min-width: 100%;
+    }
+    .logo {
+        font-size: 2.5em;
     }
     .header-tools {
         flex-direction: column;
         gap: 15px;
-    }
-    .logo {
-        font-size: 2.5em;
     }
 }
